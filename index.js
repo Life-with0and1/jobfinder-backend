@@ -13,6 +13,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use(cors({
+  origin: "https://jobfinderr.vercel.app",
+  methods: ["GET", "POST", "PATCH", "DELETE"],
+  credentials: true,
+}));
 
 // app.get("/:skill", async (req, res) => {
 //   const param = req.params.skill;
