@@ -46,6 +46,9 @@ app.options("*", cors());
 //     res.status(500).json({ error: "Failed to fetch jobs" });
 //   }
 // });
+app.get("/", (req, res) => {
+  res.send("JobFinder API running...");
+});
 
 app.use("/api/user",userRouter);
 
